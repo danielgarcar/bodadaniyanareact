@@ -1,0 +1,69 @@
+.guestlist-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.guestlist-table th, .guestlist-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #d4af37;
+}
+.guestlist-table th {
+  background: #d4af37;
+  color: #fff;
+}
+.guestlist-table tr:last-child td {
+  border-bottom: none;
+}
+.guestlist-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.15);
+  padding: 32px 24px;
+  backdrop-filter: blur(8px);
+  color: #2c3e50;
+}
+.guestlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.guestlist-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d4af37;
+  font-size: 1rem;
+}
+.guestlist-btn {
+  background: #d4af37;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.guestlist-error {
+  color: #e74c3c;
+  margin-top: 8px;
+}
+.guestlist-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+.guestlist-list li {
+  background: rgba(212,175,55,0.12);
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,265 @@
+/* =============================================================================
+   CSS PARA REACT APP - BODA DANI Y ANA
+   ============================================================================= */
+
+/* Variables básicas */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --gold-color: #d4af37;
+    --cream: #faf9f6;
+    --light-gray: #ecf0f1;
+    --medium-gray: #95a5a6;
+    --dark-gray: #34495e;
+    --white: #ffffff;
+    
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Montserrat', sans-serif;
+    --font-script: 'Great Vibes', cursive;
+    
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    
+    --border-radius: 12px;
+    --transition: 0.3s ease;
+}
+
+:root[data-theme='dark'] {
+  --primary-color: #eaeaea;
+  --secondary-color: #ff6b6b;
+  --gold-color: #f4d35e;
+  --cream: #0f1115;
+  --light-gray: #1a1d24;
+  --medium-gray: #a0a0a0;
+  --dark-gray: #cfcfcf;
+  --white: #0f1115;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background: linear-gradient(135deg, 
+        rgba(248, 249, 250, 0.95) 0%, 
+        rgba(233, 236, 239, 0.95) 25%,
+        rgba(248, 249, 250, 0.95) 50%,
+        rgba(233, 236, 239, 0.95) 75%,
+        rgba(248, 249, 250, 0.95) 100%);
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    position: relative;
+}
+
+:root[data-theme='dark'] body {
+    background: linear-gradient(135deg, 
+        rgba(15, 17, 21, 0.95) 0%, 
+        rgba(26, 29, 36, 0.95) 25%,
+        rgba(15, 17, 21, 0.95) 50%,
+        rgba(26, 29, 36, 0.95) 75%,
+        rgba(15, 17, 21, 0.95) 100%);
+}
+
+/* Textura sutil de fondo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25px 25px, rgba(212, 175, 55, 0.1) 2%, transparent 2%),
+        radial-gradient(circle at 75px 75px, rgba(231, 76, 60, 0.08) 2%, transparent 2%);
+    background-size: 100px 100px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+:root[data-theme='dark'] body::before {
+  background-image: radial-gradient(circle at 25px 25px, rgba(244, 211, 94, 0.08) 2%, transparent 2%),
+    radial-gradient(circle at 75px 75px, rgba(255, 107, 107, 0.08) 2%, transparent 2%);
+}
+
+/* Accesibilidad: foco visible */
+:focus-visible {
+  outline: 3px solid var(--gold-color);
+  outline-offset: 2px;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Botones básicos */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--secondary-color), #c0392b);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Contenedores */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+/* Glassmorphism effect */
+.glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Grid layouts */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+}

@@ -1,0 +1,34 @@
+{
+	"servers": {
+		"supabase": {
+			"command": "mcp-server-supabase",
+			"args": [
+				"--project-ref",
+				"nuqfiwtcoeeutnnjslty"
+			],
+			"env": {
+				"SUPABASE_ACCESS_TOKEN": "${input:sbp_c0e1d0a6abc9a8b6a515461482a03ec8125abd4e}"
+			},
+			"type": "stdio"
+		},
+		"mcp supabase boda": {
+			"type": "stdio",
+			"command": "mcp-server-supabase",
+			"args": [
+				"--project-ref",
+				"nuqfiwtcoeeutnnjslty"
+			],
+			"env": {
+				"SUPABASE_ACCESS_TOKEN": "${input:sbp_c0e1d0a6abc9a8b6a515461482a03ec8125abd4e}"
+			}
+		}
+	},
+	"inputs": [
+		{
+			"type": "promptString",
+			"id": "sbp_c0e1d0a6abc9a8b6a515461482a03ec8125abd4e",
+			"description": "Supabase personal access token",
+			"password": true
+		}
+	]
+}
