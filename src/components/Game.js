@@ -402,8 +402,8 @@ export default function Game() {
         {/* Controles táctiles */}
         {status === 'playing' && (
           <div style={{ position: 'absolute', inset: 'auto 0 0 0', display: 'flex', justifyContent: 'space-between', padding: '8px 10px', pointerEvents: 'none' }}>
-            <button onMouseDown={jump} onTouchStart={jump} style={touchBtn}>⮝ Saltar</button>
-            <button onMouseDown={() => crouch(true)} onMouseUp={() => crouch(false)} onTouchStart={() => crouch(true)} onTouchEnd={() => crouch(false)} style={touchBtn}>⮟ Agachar</button>
+            <button onMouseDown={jump} onTouchStart={jump} style={touchBtn}>⮝</button>
+            <button onMouseDown={() => crouch(true)} onMouseUp={() => crouch(false)} onTouchStart={() => crouch(true)} onTouchEnd={() => crouch(false)} style={touchBtn}>⮟</button>
           </div>
         )}
 
